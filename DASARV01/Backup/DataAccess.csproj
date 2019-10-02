@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>73408478-b0e1-4603-a91e-9bba3af98f06</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataAccess</RootNamespace>
+    <AssemblyName>DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DataTools, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+            <Compile Include="BussinessLayer\AccountInfo.cs" />
+        <Compile Include="DataLayer\AccountDAO.cs" />
+        <Compile Include="BussinessLayer\Cooling_RequestInfo.cs" />
+        <Compile Include="DataLayer\Cooling_RequestDAO.cs" />
+        <Compile Include="BussinessLayer\CustomerInfo.cs" />
+        <Compile Include="DataLayer\CustomerDAO.cs" />
+        <Compile Include="BussinessLayer\Customer_ComplaintInfo.cs" />
+        <Compile Include="DataLayer\Customer_ComplaintDAO.cs" />
+        <Compile Include="BussinessLayer\Customer_ContractInfo.cs" />
+        <Compile Include="DataLayer\Customer_ContractDAO.cs" />
+        <Compile Include="BussinessLayer\InformationInfo.cs" />
+        <Compile Include="DataLayer\InformationDAO.cs" />
+        <Compile Include="BussinessLayer\ItemInfo.cs" />
+        <Compile Include="DataLayer\ItemDAO.cs" />
+        <Compile Include="BussinessLayer\Monitoring_Seed_QuantityInfo.cs" />
+        <Compile Include="DataLayer\Monitoring_Seed_QuantityDAO.cs" />
+        <Compile Include="BussinessLayer\PalletInfo.cs" />
+        <Compile Include="DataLayer\PalletDAO.cs" />
+        <Compile Include="BussinessLayer\Report_Customer_ComplaintInfo.cs" />
+        <Compile Include="DataLayer\Report_Customer_ComplaintsDAO.cs" />
+        <Compile Include="BussinessLayer\Report_On_BoardInfo.cs" />
+        <Compile Include="DataLayer\Report_On_BoardDAO.cs" />
+        <Compile Include="BussinessLayer\RepositoryInfo.cs" />
+        <Compile Include="DataLayer\RepositoryDAO.cs" />
+        <Compile Include="BussinessLayer\RoleInfo.cs" />
+        <Compile Include="DataLayer\RoleDAO.cs" />
+        <Compile Include="BussinessLayer\RoleAccountInfo.cs" />
+        <Compile Include="DataLayer\RoleAccountDAO.cs" />
+        <Compile Include="BussinessLayer\Sales_ReportInfo.cs" />
+        <Compile Include="DataLayer\Sales_ReportDAO.cs" />
+        <Compile Include="BussinessLayer\ShipmentInfo.cs" />
+        <Compile Include="DataLayer\ShipmentDAO.cs" />
+        <Compile Include="BussinessLayer\Shipment_RequestInfo.cs" />
+        <Compile Include="DataLayer\Shipment_RequestDAO.cs" />
+        <Compile Include="BussinessLayer\SupplierInfo.cs" />
+        <Compile Include="DataLayer\SupplierDAO.cs" />
+        <Compile Include="BussinessLayer\Supplier_ContractInfo.cs" />
+        <Compile Include="DataLayer\Supplier_ContractDAO.cs" />
+        <Compile Include="Enumrations\Enumrations.cs" />
+        <Compile Include="Enumrations\StoredProcedureName.cs" />
+        <Compile Include="Provider\DataProvider.cs" />
+        <Compile Include="Provider\SqlDataProvider.cs" />
+        <Compile Include="Provider\SqlHelper.cs" />
+
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\DataTools.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
